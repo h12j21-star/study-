@@ -1,0 +1,157 @@
+9/2특강
+
+CSS-https://camp.veamcamp.com/allday/page/list.php
+
+경계선을 기준으로 덩어리를 나눈다.
+큰덩어리에서 작은덩어리로 나누어보자
+
+css
+(type selector)div{}
+태그의 타입을 기반으로 선택한 것
+background-color => property 속성
+: (콜론) orange => 값
+
+contents가 없으면 나타나지 않는다.
+div에서 width값이 정해지지않을때 width값은 어떻게 이루어 질까
+width는 default로 auto로 이루어져있다. //initial value라고 한다.
+속성을 준적이 없는데 있는 경우 : user agent stylesheet 브라우저가 제공하는 기본스타일
+initial value - 프로펕ㅣ에 딸린초기값
+100% : 부모가 제공하는 사용가능한 공간을 100%로차는 것. maring을 주면 그만큼 이동한다. 스크롤 생김
+auto :  margin이 있어도 부모가 제공하는 공간을 고려하여 채워진다.
+padding 안쪽여백 padding값을 주면 컨텐츠 넓이가 바뀐다..
+
+height 의 initial value 도 auto이다. height는 자식기준이다.
+
+width : auto
+height: auto
+부모요소로부터 주어진 가용 너미
+브라우저가 계산한 가능한 최대 너비
+프로퍼티마다 초기값이 다르다.
+width value
+100% : 부모요소의 넓이만을 가져오는것 100%
+auto : 부모요소의 넓이를 고려하여 맞추는것
+
+padding : 박스의 크기가 변한다.
+border 박스 바깥으로 크기가 변한다.
+box-sizing : contents-box 기본value이다. 특징: width,height에 패딩이나 보더가 플러스되어 들어간다.
+box-sizing : border-box 특징 : 박스크기에 맞게 패딩보더가 들어간다.
+
+block요소는 부모가 제공하는 콘텐츠영역 전체를 사용한다.
+margin : auto는 사용가능한 공간만큼 마진을 준다.
+auto는 각 property마다 값이 다르다
+따라서 margin-left:auto margin-right:auto 는 block요소를 가운데정렬해준다.
+margin : 0 auto ;
+margin : auto; 사용가능한 넓이가 가로는 존재하지만 세로로는 (밑에는) 다른요소의 공간이다
+
+
+
+나누는것
+Header - contents - footer 의 부분으로 나눈다.
+
+각요소들이 구분이 되도록 경계를 구분짓는 작업이 중요하다 => class
+
+class 규칙
+숫자가 먼저나오면 안된다. 의미있는 이름을 지어준다.
+
+요소.class : 상황에따라 출석부를때 등등
+
+* : universer selector 신중하게
+typeselector로 css에서 꾸민다면 너무 광범위 한 것이다.
+이름으로 따지면 전국의 최현지를 모두 부르는것
+
+감싸는거 : wrapper
+
+heading 제목을 까먹지말자 h1을 쓰자
+
+h2 는 두번째 부분의 제목
+h1을 꾸며주는 문단 : p라고 할 수 있다.
+h1은 그냥 왼쪽에 있는 가장위에 나올거같지만 페이지의 큰 제목느낌이라고 생각하면 좋을 것 같다.
+
+header의 배치를 완성한한다.
+사용자스타일리셋을 진행한다. 내가 설정한 것이아니라 브라우저에서 정한 것이기때문에 
+가장위쪽에 사용자 스타일 리셋을 작성한다. 이때 typeselector을 이용한다. 의도한것이기때문에 타입셀렉터를 이용한다.
+font-size나 color는 디테일이다. 디테일일 수록 나중에 한다!!
+
+우선 레이아웃 설정이 중요하다. 
+
+가운데 정렬
+heading: 블록요소이다.
+p요소(block요소이다 ㄷ )에서 margin-left : auto를 준경우에는 사용가능한 공간인 오른쪽으로 정렬이 되는 것이다
+
+/   루트 (가장 최상의 디렉토리로 이동 / Web root)
+./   현재 위치 (파일의 현재 디렉토리를 의미)
+../  현재 위치의 상단 폴더 (상위 디렉토리로 이동)
+출처: https://devbirdfeet.tistory.com/37 [새발개발자:티스토리]
+
+div의 너비를 지정하지않고 margin:0 auto를 하면 가운데 정렬이 안되어 보이는 이유 : 이미 꽉 차있기때문에!
+
+inline요소를 가운데 정렬하려면 상위 요소에게 준다. 
+그러면 block요소 안의 inline요소들이 정렬이 되는 것이다 :)text-align은 inline요소에 직접주는 것이 아닌 inline요소의 상위요소 block요소에게 적용을 해줘야 한다.
+
+부모자식에 준 속성은 자식에게 상속이 된다.
+width, background-color 는 안된다 따라서 모든 속성이 상속되지않고
+주로 텍스트관련한 것들은 상속이된다.
+상속받아도 나의 영역에 다시 설정을 하면 다시 설정한대로 
+
+width의 기본 값은 auto이다.
+상속은 값이 그대로 전해오는것
+그래서 부모에서 width를 주어도 자식요소가 auto이면 부모요소에 따라 바뀐것. 상속받은 것이 아니다.
+
+h1의 font-size를 header로 부터 상속 받기 위해서는
+font-size:interit이라고 표시한다.그러면 부모요소로부터 font-size를 상속받을 수 있다.
+h1의 디폴트값은 16px이다.
+초기화시 : 원래부터 상속을 받는 속성이라면 inherit해주고, 상속을 받는 속성이 아니면 initial
+
+상하패딩을 주여 요소위 위아래 공간을 만들어준다.
+.header img{} 헤더하위의 모든 img , 자식이라는 뜻이 아니다
+
+width : fit-content 텍스트 크기만큼 with가 조절이 된다.width를 40px로 했는데 그 이상의 텍스트가 있을 때 곤란
+
+
+클래스이름 CSS 네이밍 컨벤션
+
+대부분 헤더푸터먼저 공통으로 가지는 부분이 많기때문에
+
+
+
+h1에 기본 폰트사이즈를 지정해버리면 원래부터 상속이 잘되는 font-size가 더이상 상속되지 않게 됩니다. h1이 이미 고정 font-size를 가지고 있으니까요.
+
+그래서 원래부터 지원되는 font-size의 상속 기능을 h1 전부에게 다시 활성화 시켰다 보시면 됩니당.
+물론 h1 { font-size: 24px; } 이런식으로 초기화 자체를 내가 원하는 font-size로 하는 경우도 실무적으로 매우 흔합니다 🙂
+inline요소는 부모요소의 text-align속성에 영향을 받는것이지 상속과 관계없습니다.
+상속은 오로지 부모의 특정 프로퍼티,값이 하위 요소에게로 전파될때만 이야기 합니다.
+
+높이를 지정하고 싶을 때는 height로 높이를 지정한다.
+min-height: 글씨에 맞춰 높이가 지정된다
+height:auto;이면 content양에 따라 조정이된다
+그리고 필요에 따라 padding으로 조절한다.
+background-size:cover
+
+inline요소는 baseline을 기준으로 가로로 배치된다
+시각적인 부분을 html보단 css로 해결 하는 것이 좋다.
+inline요소의 margin은 좌우 설정이 가능하다. 좌우로 위치이동이 가능하다
+padding: 상하좌우 공간을 따로 차지하지 못한다. baseline은 움직이지 않는다. 그래서 맨날 겹쳐서 나왔었나보다
+display : block : inline을 block화 한다.
+display: inline-block 베이스라인은 텍스트 기준으로 구성되고 블록의 특성을 가진다.
+텍스트가 없으면 베이스라인이 block아래부분이다.(?)
+
+border의 color는 설정을 하지 않으면  글자 색깔을따른다.
+
+오른쪽마우스눌러서 검사를 하여 브라우저의 기본 속성 찾아보기
+
+클래스순서도 중요하다 !! 우선순위가 같다면 마지막에 온 것이 우선순위가 높다
+ :)section skill에서
+
+selector가 구체적일 수록 우선순위가 높다 :)h1 class=a일때 h1보다 a라고 하는 것이 우선순위가 더 높다
+
+여러번 부를 수록 우선순위가 더 높다
+
+과제chaleenge
+눈에보이는대로
+레이아웃 스타일 리셋
+유지보수가 유지 : 이건 다양한 브라우저마다 제공되는지 확인 하는거??
+크기바꾸기 contents넣어보기 폰트사이즈를 키웠는데 레이아웃까지 바뀌면안된다
+이거말고 또 있는지
+
+브라우저 확인
+https://caniuse.com/?search=div

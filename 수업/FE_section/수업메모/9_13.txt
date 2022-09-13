@@ -1,0 +1,32 @@
+9/13
+css 박스
+reset css : normalize.css
+에릭마이어
+
+마진겹침현상
+요소와요소사이에 더높은 값의 마진이 적용된다.
+해결
+display:flow-root
+overflow:hidden
+display:inline-block
+
+body와도 마진겹침이 일어날 수 있다.
+body{margin:0}을 주고 시작하면 좋다.
+
+대체 CSS 박스 모델
+WIDTH HEIGHT에 사이즈를 주고 BORDER을 준다면 width는 width+border+border이다.
+width크기에 맞추고 싶다면
+box-sizing : border-box로 한다면 width크기는 유지한채 border이 들어간다.
+
+css 단위
+고정 단위  :
+상대 단위 : 화면 크기에 따라 폰트 사이즈가 달라질 수 있다.
+em: 부모 요소의 글자 크기를 기준점으로 한다.
+body 기본 폰트 : 16px
+h1기본 폰트 : 32px
+rem: 최상위 요소를 기준으로 한다. 최상위 기준은 <html>이다.
+% : 부모 요소 기준으로 백분율
+:) 50%라면 부모요소의 절반이다.
+height는 auto로 설정 되어 있다.
+부모의 높이가 auto인 경우에는 %는 작동 하지 않는다.
+

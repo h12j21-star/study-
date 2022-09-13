@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <table>
+      <!--table>(tr>td*7)*4-->
+      <!--table안 tr td tr : 줄 수 (행) td : 데이터 수-->
+      <caption>은행</caption>
+      <thead>
+      <tr>
+        <th>통장</th>
+        <th>예금액</th>
+        <th>이자</th>
+        <th>계좌</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>신한</td>
+        <td>2억</td>
+        <td>2.2%</td>
+        <td>00-000-000</td>
+      </tr>
+      <tr>
+        <td>농협</td>
+        <td>1억</td>
+        <td>2.2%</td>
+        <td>333-333-33</td>
+      </tr>
+      <tr>
+        <td>기업</td>
+        <td>2억</td>
+        <td>2.3%</td>
+        <td>222-222-333</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>통합잔고</td>
+        <td colspan="3">90억</td>><!--row방향 병함-->
+      </tr>
+    </tfoot>
+      </table>
+</body>
+</html>

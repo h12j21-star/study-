@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+      <label for="food">가장 좋아하는 음식을 고르세요</label>
+      <select name="음식" id="food">
+        <option name="음식" value="마라탕">마라탕</option>
+        <option name="음식" value="피자">피자</option>
+        <option name="음식" value="치킨">치킨</option>
+        <option name="음식" value="햄버거">햄버거</option>
+      </select>
+    </form>
+    <br>
+    <br>
+
+    <form>
+      <label for="yourname">이름</label>
+      <input type="text" name="이름" value="이름" id="yourname">
+    </form>
+    
+    <form>
+      <label>
+            이름:
+            <input type="text" name="name">
+       </label>
+    </form>
+    <br>
+    <br>
+
+    <form action="" method="post">
+      <fieldset>
+          <legend>개인정보</legend>
+          <label for="myname">이름</label>
+          <input type="text" name="name" id="myname">
+          <label for="mytel">전화번호</label>
+          <input type="tel" name="tel" id="mytel">
+          <label for="myemail">이메일</label>
+          <input type="email" name="email" id="myemail">
+      </fieldset>
+      <fieldset>
+        <legend>개인정보 제공 동의</legend>
+        <label for="checkAgree">개인정보 제공에 동의 하십니까?</label>
+          <input type="checkbox" name="agree" id="checkAgree">
+      </fieldset>
+    </form>
+    <br><br>
+
+
+    <form action="form.html" method="post">
+      <legend>이름과 성별을 입력하세요</legend>
+      <input type="text" name="이름" value="name"><br>
+      <input type="text" name="성별" value="성별"><br>
+      <button>제출</button>
+
+    </form>
+    
+</body>
+</html>

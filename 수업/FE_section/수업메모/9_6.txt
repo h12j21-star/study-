@@ -1,0 +1,156 @@
+9/6
+<text-level semantics>
+텍스트 레벨 요소의 특징
+1. 요소안의 컨텐츠의 크기만큼만 영역을 점유합니다.
+2. 자식으로 Sections, Grouping Contents를 배치할 수 없습니다.
+주석 : ctrl+/ , 포트폴리오시 꼭 작성하기
+
+1. <br><wbr>
+<br> : 줄바꿈
+<wbr>: 텍스트 박스에서 한 줄로 모두 표시가 안될때 사용한다.
+html은 공백을 기준으로 단어인지 문자인지를 구별한다.
+word-break
+white-space:nowrap => 박스크기를 벗어날 때 wbr 태그에 사용한 곳 기준으로 줄바꿈이루어짐
+<pre>태그는 줄바꿈 그대로 인식해서 화면에 나타낸다.
+이와 같은 css속성은 white-space:pre이다.
+line-break 한글은 글자 단위로 영어는 단어단위로 이루어진다.
+word-break:break-all이 기본 설정이라서 한글자씩 줄바꿈이 이루어지는 것을 알 수 있다.
+
+2. a태그
+코드 : <a href="경로">
+a태그는 sections, grouping content 요소를 자식으로 하는것이 허용됩니다. 
+사용자와 인터렉션이 가능한 요소 <a><button>을 자식으로 두지 않는다.
+attribute target='_blank' 새로운 탭을 생성시킨다.
+<a href="https://www.naver.com" target="_blank">click</a>
+파일 이동도 가능하다.
+<a href="./index.html">click</a>
+해쉬링크-페이지 내에서 이동이 필요 할 때(내부이동)
+<a href="#three">click</a> 
+부드럽게 하고 싶을 때 scroll-behavior:smooth
+다운로드
+<a href="" download></a>
+다운로드시 파일이름이 설정된다.
+
+<a href="" download="파일이름"></a>
+다운로드시 파일이름이 설정된다.
+전화번호를 인식한다.
+<a href="tel:+">02-777-7777</a>
+전화번호를 인식하여 브라우저가 전화를 연결하도록 한다.
+메일을 보내도록 연결해준다.
+<a href="mailto:hello@gamil.com">hello@.gmail.com</a>
+
+3.<b><strong>
+<b> 시맨틱하지않다. 사용x
+<strong>굵은 글꼴 + 중요도 강조하고 싶을 때 사용된다. heading태그로 사용하기 애매한 제목에 주로 사용한다.
+
+4. <i>,<em>
+<i>기울임의 글꼴을 나타낸다. 전문용어라는 의미를 가지고 있다.
+주언어가 한글이지만 영어로 표현되었을때
+생각이 표기되어있는 부분등 
+<em> 기울임의 글꼴이다. 강조의 의미가 있다. <strong>태그보다는 다소 약한 강조이다.
+5. <dfn> 현재 문맥에서 정의 하고 있는 용어를 나타낸다. 
+목록이 아닌 경우 dl dt dd 대신 dfn을 사용한다. 문서에서 최초로 나타났을 때
+<p> 혹은 <dt><dd> 쌍, <section> 요소일 경우 그 컨텐츠를 dfn의 정의에 대한 설명으로 간주합니다
+
+6.<abbr>
+준말, 약자를 나타낼때
+<abbr title="">www</abbr> title속성은 마우스 커서를 올릴때 제목이 나타난다. 
+
+
+7.<sup>,<sub>
+수학 공식 첨자기호사용시 이용한다.
+
+8.span
+의미가 없다. 줄바꿈없이 영역을 묶는 용도
+block으로는 div와 비슷하다.
+
+
+<embedded content>
+
+1.<img> html페이지에 이미지를 삽입할 때 사용하는 태그이다.
+<img src="a.png" alt=""> 스크린리더가 읽지않는다.
+<img src="a.png">스크린리더가 a를 읽는다
+<img src="a.png" alt="~하는사진"> 스크린리더가 '~하는사진'을 읽는다.
+min-width : 960px 250px 은 브라우저의 넓이가 960px이상이면 이미지의 크기를 250px로한다
+srcset : 반응형 이미지를 위한 속성이다.
+브라우저가 최상의 이미지를 로딩하는데 도움을 준다.
+이미지 다운로드 사이트 : https://pixabay.com/ko/
+저작권 여부 꼭 살펴보기
+폰트
+dafont 눈누사이트 구글폰트
+대기업무려폰트쓰기 한글제외
+srcset : 디바이스에 따라 조건에 맞는 이미지를 보여주는 요소
+media : 
+type속성 
+ 지원하지 않는 포맷이라고 판단되면 다음 <source> 요소로 넘어갑니다. 브라우저마다 제공하는 속성이 다르기때문에 type을 여러개 주는 것이다.
+‘점진적 향상기법
+
+다음목록 보는 버튼은 내용뒤에 넣는다. 스크린리더를 고려한 배치이다.
+
+iframe
+<iframe src=""></iframe>
+html에서 또다른 html페이지를 보여주고 싶을때 사용한다. :)유튜브로 영상을 불러올 때 많이 사용한다.
+
+audio
+video 
+controls
+autoplay
+preload
+poster:파일을 미리 로딩하여 사용자가 바로 영상을 볼 수 있도록 한다.
+source 
+다른페이지에 있어도 어색하지않은가
+독립적인 위젯으로 사용 할  수 있는가
+
+iframe : 신중하게 사용해야한다.
+
+
+git clone repo주소 .
+파일 수정이나 추가
+git add .
+git commit -m 'hello1'
+git push
+
+git pull
+code -r {파일명} # VSC에서 파일 수정이나 추가 예시: code -r index.html
+git add .
+git commit -m 'hello2'
+git push
+
+git pull
+파일 수정이나 추가
+git add .
+git commit -m 'hello3'
+git push
+
+
+파일
+절대경로: 현재파일과 관련없이 열수있는경로 :)링크같은것
+상대겨호:현재파일의 위치와 관련없이 열수있는 경로
+./현재 파일 ../ 하나상위 / 모든
+
+질문 동영ㅇ상 넣을때
+  video추천하지 않는다고했는데 그 대안이 iframe인가?/
+
+
+
+
+30분 요약강좌 시즌 1(HTML, CSS무료) : https://inf.run/7rTK
+30분 요약강좌 시즌 4(GitHub, 무료) : https://inf.run/mBHs
+https://www.inflearn.com/course/30%EB%B6%84-%EC%8B%9C%EC%A6%8C4-%EA%B9%83%ED%97%88%EB%B8%8C
+1만시간의 법칙 : https://inf.run/zzx6
+견고한 HTML, CSS : 6695-de5f4b9af436
+정규표현식 : 6696-cb4de7b97068
+Notion 강의 : 6697-a75adcca122e
+https://www.boostcourse.org/web201
+https://www.edwith.org/cs50
+1만시간의 법칙 : https://inf.run/zzx6
+견고한 HTML, CSS : 6695-de5f4b9af436
+정규표현식 : 6696-cb4de7b97068
+Notion 강의 : 6697-a75adcca122e
+https://www.boostcourse.org/web201
+https://www.edwith.org/cs50
+
+
+오늘 들어 볼거
+github30분 요약강좌
+모던자바스크립트

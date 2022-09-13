@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9월8일실습</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <style>
+      /*선택자*/
+      /*캐드캐스팅이아닌 우선순위!! 후자우선순위 원칙이다. 순서바꿔보세유*/
+
+      * {
+        color: red;
+      }
+      h1,
+      h2 {
+        color: green;
+      }
+      /*선택자 우선순위 캐스캐이드이 적용된다. 자손과 직계자식*/
+      /*자손*/
+      div p {
+        color: yellow;
+      }
+      /*형제*/
+      div + p {
+        color: pink;
+      }
+      /*직계자식*/
+      div > p {
+        color: blueviolet;
+      }
+
+      /**우선순위 점수계산</**/
+
+      /*css border*/
+      .part_b {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        border: 5px solid black;
+        border-radius: 20px;
+        border-top-left-radius: 100px;
+      }
+      .left {
+        width: 30px;
+        height: 30px;
+        background-color: bisque;
+        border: 5px solid black;
+        border-radius: 5px;
+        border-top-left-radius: 25px;
+      }
+      .right {
+        width: 30px;
+        height: 30px;
+        background-color: bisque;
+        border: 5px solid black;
+        border-radius: 5px;
+        border-top-right-radius: 25px;
+      }
+      .face {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        border: 5px solid black;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- reset css -->
+    <p>reset css</p>
+    <h1>hello</h1>
+    <h2>hello</h2>
+    <h3>hello</h3>
+    <h4>hello</h4>
+    <h5>hello</h5>
+    <p>hello</p>
+    <!-- https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Selectors -->
+    <!-- https://developer.mozilla.org/ko/docs/Web/CSS/Reference -->
+    <!--class, id 선택자-->
+    <!--p.cont-msg#main-title-->
+    <!--선택자 우선순위-->
+    <br /><br />
+    <p>-----선택자------</p>
+    <div>
+      <p>hello 직계자식</p>
+    </div>
+    <div>
+      <section>
+        <h2>p와 형제</h2>
+        <p>h2와 형제,div의 자손</p>
+      </section>
+    </div>
+    <p>div와 형제</p>
+    <br /><br />
+    <!-- 둘중 높은 우선순위는? class선택자가 많아 합친 점수가 id점수를 넘더라도 id선택자의 우선순위가 더 높다.-->
+    <h1 id="test1">hello</h1>
+    <!--태그 내 class에 기입되는 순서는 적용과 무관하다.-->
+    <br /><br />
+    <!--css border-->
+    <p>css border</p>
+    <br />
+    <div class="part_b"></div>
+    <div class="part_b"></div>
+    <br /><br />
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="face"></div>
+  </body>
+</html>

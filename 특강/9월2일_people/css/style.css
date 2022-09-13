@@ -1,0 +1,85 @@
+h1 , p ,ul{
+  margin : initial; /*사용자 스타일 리셋*/
+  padding:0;
+}
+li{
+  list-style-type: none;;
+}
+h1,h2{
+  font-size:inherit;
+  font-weight:inherit;
+}
+a{
+  /*a의요소의 사용하지않은 기본 속성은 초기화 시킨다.
+  상속받도록 inherit이라고 설정하기*/
+  color: inherit ;
+  text-decoration: inherit;
+}
+.wrapper{
+  background-color:#ddd;
+  width:800px;
+  margin: 0 auto;
+  font-size:16px;
+}
+.header{
+  padding: 10px 0;
+  background-image:url(/images/cover04.png);
+  text-align:center; /*block요소의 내부 inline요소인 text에 영향을 준다.block요소 자체는
+  가운데 정렬이 되는 것이 아니다.*/
+  background-size:cover;
+  color:white; 
+}
+.header h1 {
+  font-size:80px;
+  font-weight:bold;
+}
+
+.header img{
+  border-radius:50%;
+  border: 5px solid white;
+}
+.header p{
+  border-top: 5px solid;/*contents->paaind->border->margin*/
+  width:fit-content; /*max-content min content*/
+  margin: 10px auto;
+  padding: 0 20px;
+}
+
+.section{
+  background-image:url(/images/icon-information.png);
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+  background-color:white;
+  margin:20px;
+  padding:20px
+}
+.skill{
+  background-image:url(/images/icon-skills.png);
+}
+ 
+.section h2{
+  font-weight:bold;
+  font-size:20px;
+}
+
+.footer{
+  background-color:#ddd;
+  text-align:center; 
+  padding:20px 0;
+}
+.link{ /*html에서 줄바꿈은 띄어쓰기로 보인다.*/
+  display:inline-block;
+  padding:10px 20px;/*상하좌우에 baseline기준으로 생긴다. */
+  border-radius:40px;
+  border: 4px solid;
+  color:#ccc;
+}
+.link.blue{
+  color:dodgerblue;
+}
+.link.purple{
+  color:violet;
+}
+.link.black{
+  color:black;
+}

@@ -1,0 +1,80 @@
+1. {e : a}
+{g : d}
+{g : d}
+
+babc bada
+
+{b:b}
+{a:b}
+{b:d}
+{c:a}
+
+같은 문자가 key에 나타나면 key의 value와 현재 t1이 같은지
+확인한다.
+2.
+abc ahbgdc
+abc
+
+abc dacgg
+dac
+
+abc agbdbc
+abc
+
+모두포함 순서대로
+문자를 포함하는지확인 
+첫번째 문자부터
+있으면 넣기
+없으면 패스
+
+문자있는지 확인 -> 순서 확인
+
+
+9/7
+table등등부터 
+head에는 meta태그 link태그가 들어간다.
+ 네이버 추적코드 삽ㅇ입 등등 
+스피너 ul 
+
+마크타움https://pandao.github.io/editor.md/en.html
+
+[http://127.0.0.1:5500/017.html?name=현지&tel=010&email=jh06079%40naver.com&agree=on](http://127.0.0.1:5500/017.html?name=%ED%98%84%EC%A7%80&tel=010&email=jh06079%40naver.com&agree=on)
+
+protocol/post/
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Summernote with Bootstrap 4</title>
+    <!-- Toast Editor 2.0.0과 의존성 -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+  </head>
+  <body>
+    <!-- 해당 예제는 bootstrap 시간에 했었습니다. -->
+<p>입력</p>
+    <div id="editor"></div>
+
+  </body>
+</html>
+
+
+css
+CSS는 웹 페이지의 다양한 스타일을 정의할 때 쓰이며 단계별 스타일 적용 우선순위를 가집니다.
+HTML이 웹의 뼈대라고 한다면 CSS는 HTML을 꾸며주는 가죽, 피부에 해당합니다.
+selecter
+property
+value
+선택자 
+태그를 가리킬때
+
+내부 인라인 외부
+내부와 인라인 중 태그와 가까운 것으로
+적용되어 나온다.
+
+폰트도 트래픽 문제가 발생할 수 있다.
+잘 사용되지 않는 폰트는 이미지 사용
+많이 사용되지 않는 폰트는 경량화한다.
+cdn보다는 내부 api나 로컬 서버를 사용한다.
+
+
+동영상 배속 하는 코드.. : document.getElementsByTagName("video")[0].playbackRate = 2.5
