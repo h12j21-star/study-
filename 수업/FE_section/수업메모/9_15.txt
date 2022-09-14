@@ -1,0 +1,84 @@
+9_14
+line-height:1 폰트사이즈와 동일 
+hakf-leading이 없어진다.
+text
+text-spacing 글자사이 간격
+text-align 기본은 left
+center
+left
+right
+justify : 마지막 라인을 제외하고 텍스트를 양쪽으로 정렬한다.
+인라인 요소,인라인블록,블록레벨요소안의 인라인요소 정렬이 가능하다.
+
+상속가능
+세로정렬
+
+1. inline-height:는 폰트사이즈를 빼고 반으로 나눈다.
+
+한줄일때 inlin-height:heiht값으로 설정하면 세로 정렬이 가능하다.
+폰트의 특성에 따라 조금씩 다르다. margin값으로 따로 설정을 해줘야한다.
+
+2. position:relative
+top:50%
+margin-top
+
+버튼은 width height를 변화시키면 가운데 정렬이 된다.
+컨텐츠에 맞게 변하기때문에 넓이 높이를 주는 것이 흔하지는 않다.
+
+3. vertical-align- to buttom이 주로 많이 쓰인다
+인라인 요소의 수직 정렬을 맞추기위해 사용하는 속성이다.
+baseline:베이스라인을 부모의 베이스라인에 맞춘다.
+sub 베이스라인을 부모의 아래첨자 베이스라인에 맞춘다.
+super
+top인라인박스의 상단으로 정렬한다.
+text-top : 부모엘리먼트 폰트의 상단으로 정렬
+bottom : 하단위치를 전체라인하단으로
+text-bottom:하단의위치를 엘리먼트 폰트의 하단으로
+middle:폰트의 중간위치를 부모의 baseline + x-height의 절반에 해당하는 위치로 정렬합니다.
+아래와 같이 img 태그의 바깥쪽 공백을 없애기 위하여 자주 사용합니다. 
+text-indent
+들여쓰기
+단위:mm,cm,px,em,%
+
+text-decoration : none;
+a태그의 기본스타일을 제거할때 가장 자주 사용된다.
+text-overflow
+부모컨테이너를 넘어간 컨텐츠가 어떻게 보여질지
+clip
+ellipsis
+
+
+2.position
+# 1. position이란?
+
+이름에서처럼, position이란 HTML 태그의 위치를 지정해주는 속성입니다. position 속성을 이용해 우리는 페이지의 레이아웃을 결정할 수 있습니다.
+종류
+position:static 기본값이다. position값을 주지 않을때 static값을 가진다.
+position:relative상대적인 원래 자신의
+위치로부터 움직인다.
+
+position:absolute
+로 부모 요소입니다. absolute는 static을 제외한 position 속성값(relative,absolute,fixed)을 가진 가장 가까운 부모의 박스 내를 기준으로 위치하게 됩니다.
+부모요소에 position 이없거나static이라면 최상위 부모까지 올라간다.=html
+body나html이 부모요소가 될 수 있다.
+position:fixed
+스크롤을 내릴때 특정 박스가 고정되어움직이지 않는다.'뷰포트를 기준으로 움직인다.
+position:sticky
+조상에 스크롤이있다면가까운 부모요소으 컨텐츠영역에 달라붙는다.
+z-index
+요소들의 위치가 겹쳐있을 때 어떤 요소가 위로 올라가게 할 것인지를 정할 수 있다. z-index값이 큰 요소가 작은 요소의 위를 덮어버린다.
+최소값 : -1
+부모가 z-index를 높여 자식 앞으로 나올 수 없고, 자식은 z-index를 낮춰 부모 뒤로 가는 것은 가능하다. 같은 값이라면 나중에 위치한요소가 위에 위치한다.
+자식이 아무리 z-index값이 커도 부모요소보다 높은z-index값의 형제를 넘을수는 없다.
+3.float
+이미지 인라인라인 그래서 텍스트가 옆으로 붙어나옴
+블록요소레벨, 인라인 요소 모두 정렬 가능하다.
+float된 요소들의 넓이의 합이 그것들을 감싸는 컨테이너의 넓이보다 커지면 순차적으로 아래로 떨어진다.
+inline요소에 float속서을 준다면 display속성이 block으로 바뀌게 된다.
+div안에 요소들이 float를 가진다면 div는 자식들을 인식하지 못한다.따라서 그 밑으ㅐ p태그가 div의 자식들을 인식하지 못하ㅗ div바로 밑으로 위치하게된다.
+float로 인해 텍스트가 이미지 옆에 위치했을 경우 텍스트를 감싸는 p태그가 이미지를 인식하지못한다.
+해제법
+overflow:hidden
+높이값주기
+다음형제요소에 clear속성 사용하기 clear:both
+clear-fix css :: after가상요소로 해결한다.
