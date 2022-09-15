@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /*자식 선택자*/
+      div > h2 {
+        color: pink;
+      }
+      /*자손 선택자*/
+      div h2 {
+        color: red;
+      }
+      .c + ul {
+        background-color: pink;
+      }
+      h1 ~ ul {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="c">hello world</h1>
+    <ul>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+    </ul>
+    <ul>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+    </ul>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+    <h1>hello world</h1>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+    <h2 class=".c">hello world</h2>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+    <div>
+      <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+      </ul>
+    </div>
+  </body>
+</html>

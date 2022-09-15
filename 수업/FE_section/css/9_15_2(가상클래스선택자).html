@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /*first,last는 여백 조절시 자주 사용된다.
+      첫번째 자식에 적용된다는 것을 유의하자
+      nth-child()의 숫자가 0부터 시작하지 않는다.*/
+      .foo:first-child {
+        background-color: red;
+      }
+      .foo:last-child {
+        background-color: pink;
+      }
+      .foo:nth-child(2) {
+        background-color: green;
+      }
+      .foo:nth-child(odd) {
+        font-size: 30px;
+      }
+      .foo:nth-child(even) {
+        font-size: 10px;
+      }
+      /*n번째 자식들 n은0부터 사용한다.*/
+      .foo:nth-child(n) {
+        color: beige;
+      }
+      .foo:nth-child(2n + 1) {
+        color: black;
+      }
+      /*방문한 적이 있는 링크를 선택한다. 개인정보에 유의*/
+      a:visited {
+        color: green;
+      }
+      li:not(.one) {
+        color: Red;
+        /*one이 아닌 것만 빨간색 브라우저 사용여부를 판단하고 써야한다.*/
+      }
+      /*상호작용을 위한 가상 클래스*/
+      button {
+        border: 1px solid #ddd;
+        padding: 30px;
+        background-color: lightblue;
+        color: pink;
+        border-radius: 4px;
+        font-size: 20px;
+        font-weight: 700;
+        transition: all 0.5s;
+      }
+      button:hover {
+        border: 1px solid #ddd;
+        padding: 30px;
+        background-color: pink;
+        color: lightblue;
+        border-radius: 4px;
+        font: size 20px;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+      /*요소실행시 링크나 버튼을 누르면 변한다.*/
+      button:active {
+        color: blueviolet;
+      }
+      /*focus는 요소에 포커스가 있을때 클릭할 수 있는 요소나 input,select같이 상호작용하는 경우   */
+      input:focus {
+        border: 5px solid pink;
+        outline: 0;
+      }
+      .b:checked + label {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blue">가상 클래서 선택자</h1>
+    <ul>
+      <!--<div>hello</div>-->
+      <li class="foo">1</li>
+      <li class="foo">2</li>
+      <li class="foo">3</li>
+      <li class="foo">4</li>
+      <li class="foo">5</li>
+    </ul>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li class="one">hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+    <button>hover</button>
+    <form action=" " methid="get">
+      <label for="a">이름</label>
+      <input type="text" id="a" />
+      <label for="b">나이</label>
+      <input type="text" id="b" /><br />
+      <input class="b" type="checkbox" id="check" />
+      <label for="check">안녕 안녕 안녕 안녕</label>
+    </form>
+  </body>
+</html>

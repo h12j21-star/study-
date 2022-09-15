@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      .container {
+        display: flex;
+        text-align: center;
+        /*기본 :
+        flex-direction: row; */
+        /*flex-direction: column;*/
+        /*flex-direction: row-reverse;*/
+        justify-content: center;
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-between; /*양쪽 끝에 붙는다.*/
+        justify-content: space-around;
+      }
+      .items {
+        width: 100px;
+        height: 100px;
+        color: plum;
+        font-weight: 900;
+        background-color: pink;
+        border: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">6</div>
+    </div>
+  </body>
+</html>
