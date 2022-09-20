@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .a,
+      .b {
+        width: 150px;
+        height: 150px;
+        background-color: plum;
+        transition: all 1s;
+        transition-timing-function: linear;
+      }
+      .a:hover {
+        width: 200px;
+        height: 200px;
+        background-color: powderblue;
+      }
+      .b:hover {
+        transition: all 1000ms;
+        /*background-color속성이 1초에 걸쳐서 변경된다.속성을 b태그에 지정해두면 더 빠르게 작동한다.*/
+        transition-property: background-color;
+        background-color: powderblue;
+      }
+      .c,
+      .d,
+      .e,
+      .f {
+        width: 100px;
+        height: 100px;
+        background-color: palevioletred;
+        transition: all 0.5s;
+      }
+      .c:hover {
+        /*scale은 중심으로 커진다.*/
+        transform: scale(2);
+      }
+      .d:hover {
+        transform: rotate(180deg);
+      }
+      .e:hover {
+        /*x,y축으로 움직인다.*/
+        transform: translate(100px, 100px);
+      }
+      .f:hover {
+        transform: translate(100px, 100px);
+        transform-origin: top center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>transition</p>
+    <div class="a">hello world</div>
+    <br /><br /><br />
+    <p>transition-property</p>
+    <div class="b">hello world</div>
+  </body>
+  <p>transition scale</p>
+  <div class="c">hello world</div>
+  <p>transition rotation</p>
+  <div class="d">hello world</div>
+  <p>transition translate</p>
+  <div class="e">hello world</div>
+  <p>transition origin</p>
+  <div class="f">hello world</div>
+</html>

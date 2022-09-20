@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      @keyframes hyeonji {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(500px, 0);
+        }
+        50% {
+          transform: translate(500px, 500px);
+        }
+        75% {
+          transform: translate(0, 500px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+      .movebox {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        animation: hyeonji 2s;
+      }
+      /*참고용 코드*/
+      @keyframes hyeonji2 {
+        from {
+          background-position: 0px, 0px;
+        }
+        to {
+          background-position: -3730px, 0;
+        }
+      }
+      .a {
+        width: 110px;
+        height: 18px;
+        background: url() no-repeat;
+        animation: hyeonji2 3s;
+        animation-fill-mode: forward;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="movebox">hello</div>
+    <div class="a">hello world2</div>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+      .container{
+        display:grid;
+        /*fr은 fraction(분수,일부,비율)*/
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .container2{
+        display:grid;
+        /*fr은 fraction(분수,일부,비율)*/
+        grid-template-rows:  repeat(3,100px);/*100px을3번 반복*/
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:100px 200px 100px 200px;
+      }
+      .item2,.item3,.item6,.item7,.item8{
+        border:1px solid black;
+      }
+      .container3{
+        display:grid;
+        /*최소와 최대넓이를 지정해주다.*/
+        grid-template-columns:repeat(3,minmax(50px,80px));
+        grid-template-rows:repeat(3,minmax(50px,80px));
+      }
+      .container4{
+        display:grid;
+        /*auto-fill : 컨텐츠넓이에 따라 가능한 많은 그리드 컬럼을 배치하고싶을때.
+        column을 더 채우지 않는다.크기만큼 늘어나지않는다. min에 맞춘다.*/
+        grid-template-columns:repeat(auto-fill,minmax(50px,auto));
+      }
+      .container5{
+        display:grid;
+        /*auto-fill : 컨텐츠넓이에 따라 가능한 많은 그리드 컬럼을 배치하고싶을때.
+        column을 더 채운다.크기만큼 늘어난다.
+        max에 맞춘다.*/
+        grid-template-columns:repeat(auto-fit,minmax(50px,auto));
+      }
+      .container6{
+        display:grid;
+        height:500px;
+        grid-template-columns: repeat(3,1fr);
+      }
+      .item6:nth-child(1){
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start: 1;
+        grid-row-end:3;
+      }
+      .container7{
+        display:grid;
+        height:500px;
+        grid-template-columns: repeat(3,1fr);
+      }
+      .item7:nth-child(1){
+        grid-column-start:1;
+        grid-column-end:3;
+    
+     
+      }
+      .item7:nth-child(2){
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start: 2;
+     
+      }
+      .item7:nth-child(3){
+        grid-column-start:1;
+        grid-column-end:3;
+      
+      }
+      .item7:nth-child(4){
+        grid-column-start:1;
+        grid-column-end:4;
+      
+      }
+      .container8{
+        display:grid;
+      }
+      .item8{
+        border:1px solid black;
+      }
+      .item8:nth-child(1){
+        grid-area:1 / 1/ span 2 / span 2
+      }
+    </style>
+</head>
+<body>
+    <p>grid-grid-template-columns:1fr 1fr 1fr;</p>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+      <div class="item">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-grid-template-rows:100px 200px 100px 200px;</p>
+    <div class="container2">
+      <div class="item2">1</div>
+      <div class="item2">2</div>
+      <div class="item2">3</div>
+      <div class="item2">4</div>
+      <div class="item2">5</div>
+      <div class="item2">6</div>
+      <div class="item2">7</div>
+      <div class="item2">8</div>
+      <div class="item2">9</div>
+      <div class="item2">10</div>
+      <div class="item2">11</div>
+      <div class="item2">12</div>
+      <div class="item2">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-minmax() grid-template-columns:repeat(3,minmax(50px,80px));
+      grid-template-rows:repeat(3,minmax(50px,80px));</p>
+    <div class="container3">
+      <div class="item3">1</div>
+      <div class="item3">2</div>
+      <div class="item3">3</div>
+      <div class="item3">4</div>
+      <div class="item3">5</div>
+      <div class="item3">6</div>
+      <div class="item3">7</div>
+      <div class="item3">8</div>
+      <div class="item3">9</div>
+      <div class="item3">10</div>
+      <div class="item3">11</div>
+      <div class="item3">12</div>
+      <div class="item3">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-auto-fill:repeat(auto-fill,minmax(50px,auto))</p>
+    <div class="container4">
+      <div class="item3">1</div>
+      <div class="item3">2</div>
+      <div class="item3">3</div>
+      <div class="item3">4</div>
+      <div class="item3">5</div>
+      <div class="item3">6</div>
+      <div class="item3">7</div>
+      <div class="item3">8</div>
+      <div class="item3">9</div>
+      <div class="item3">10</div>
+      <div class="item3">11</div>
+      <div class="item3">12</div>
+      <div class="item3">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-auto-fit:repeat(auto-fit,minmax(50px,auto))</p>
+    <div class="container5">
+      <div class="item3">1</div>
+      <div class="item3">2</div>
+      <div class="item3">3</div>
+      <div class="item3">4</div>
+      <div class="item3">5</div>
+      <div class="item3">6</div>
+      <div class="item3">7</div>
+      <div class="item3">8</div>
+      <div class="item3">9</div>
+      <div class="item3">10</div>
+      <div class="item3">11</div>
+      <div class="item3">12</div>
+      <div class="item3">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-영역 설정하기</p>
+    <div class="container6">
+      <div class="item6">1</div>
+      <div class="item6">2</div>
+      <div class="item6">3</div>
+      <div class="item6">4</div>
+      <div class="item6">5</div>
+      <div class="item6">6</div>
+      <div class="item6">7</div>
+      <div class="item6">8</div>
+      <div class="item6">9</div>
+      <div class="item6">10</div>
+      <div class="item6">11</div>
+      <div class="item6">12</div>
+      <div class="item6">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-영역 설정하기</p>
+    <div class="container7">
+      <div class="item7">1</div>
+      <div class="item7">2</div>
+      <div class="item7">3</div>
+      <div class="item7">4</div>
+      <div class="item7">5</div>
+      <div class="item7">6</div>
+      <div class="item7">7</div>
+      <div class="item7">8</div>
+      <div class="item7">9</div>
+      <div class="item7">10</div>
+      <div class="item7">11</div>
+      <div class="item7">12</div>
+      <div class="item7">13</div>
+    </div>
+    <br><br></br>
+    <p>grid-span</p>
+    <div class="container8">
+      <div class="item8">1</div>
+      <div class="item8">2</div>
+      <div class="item8">3</div>
+      <div class="item8">4</div>
+      <div class="item8">5</div>
+      <div class="item8">6</div>
+      <div class="item8">7</div>
+      <div class="item8">8</div>
+      <div class="item8">9</div>
+      <div class="item8">10</div>
+      <div class="item8">11</div>
+      <div class="item8">12</div>
+      <div class="item8">13</div>
+    </div>
+    <br><br></br>
+   
+</body>
+</html>
