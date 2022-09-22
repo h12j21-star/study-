@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      p {
+        font-weight: 700;
+      }
+      /*input요소를 보이지 않게한다. 가상요소를 사용해서 input요소를 커스텀한다.*/
+      .txt-hide {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: 01px;
+        overflow: hidden;
+      }
+      .labl-hold::before {
+        display: inline-block;
+        content: "";
+        width: 22px;
+        height: 22px;
+        background: url("https://cdn.discordapp.com/attachments/993399814974885968/1022405172321857657/css_sprites_retina.png");
+        background-position: -52px -10px;
+        background-size: 84px 42px;
+        vertical-align: -5px;
+      }
+      /*input박스가 체크되었을때 labl-hold의 가상요소를 선택한것*/
+      .inp-hold:checked + .labl-hold::before {
+        background: url("https://cdn.discordapp.com/attachments/993399814974885968/1022405172321857657/css_sprites_retina.png") -10px -10px;
+        background-size: 84px 42px;
+      }
+      /*focus를 주어 fousing이 가능하게 한다.*/
+      .inp-hold:focus + .labl-hold::before {
+        outline: 2px solid #000;
+        outline-offset: 5px;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      select {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br />
+    <p>커스텀 input</p>
+    <input type="checkbox" id="a" class="inp-hold txt-hide" />
+    <!--활성화된,활성화되지않는 이미지 두개가 필요하다.-->
+    <label for="a" class="labl-hold">선택해주세요</label>
+    <br /><br /><br />
+    <p>커스텀select박스</p>
+    <select>
+      <option value="">하나</option>
+      <option value="">둘</option>
+      <option value="">셋</option>
+    </select>
+  </body>
+</html>

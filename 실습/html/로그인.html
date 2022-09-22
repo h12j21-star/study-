@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 화면</title>
+    <style>
+      @font-face {
+        font-family: "";
+        src: "";
+        font-weight: 500;
+      }
+      /*전체 적으로가져야한다면 reset.css에 넣는 것이 좋다. 상속 받을 수 있는 것은 상속을 받으면 좋다.*/
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        /*font를 상속받는다.*/
+        font-family: "";
+        line-height: 15px;
+        font-weight: 400;
+        font-size: 12px;
+        font-size: 12px;
+      }
+      .cont-login {
+        width: 390px;
+        margin: 20px auto; /*가운데 정렬*/
+        padding: 18px 15px 17px 15px;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        overflow: hidden; /*flat해제*/
+      }
+      .cont-login .txt-login {
+        margin-bottom: 16px;
+      }
+      /*a태그는 inline요소이다.*/
+      .cont-login .link-login {
+        display: block;
+        padding: 13px 20px 12px;
+        background-color: #711bff;
+        border-radius: 4px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 17px;
+      }
+      .link-login .img-login {
+        width: 57px;
+        height: 11px;
+        margin-right: 8px;
+      }
+      .cont-login .find {
+        float: left;
+      }
+      .cont-login .find * {
+        float: left;
+      }
+      .cont-login .img-find,
+      .cont-login .img-join {
+        width: 16px;
+        height: 16px;
+      }
+      .cont-login .join {
+        float: right;
+      }
+      .cont-login .join * {
+        float: left;
+      }
+
+      .find [class^="link"],
+      .join [class^="link"] {
+        color: #767676;
+        text-decoration: none;
+      }
+      .cont-login .img-find,
+      .cont-login .img-join {
+        margin-right: 4px;
+      }
+      .find .link-id::after {
+        display: inline-block; /*넓이를 조절할 수 있다. 길이와 넓이*/
+        content: ""; /*건텐츠에 글씨를 넣으면 스크린 리더가 읽는다.*/
+        width: 1px;
+        height: 11px;
+        background-color: #767676;
+        margin: 0 4px 0 6px;
+        vertical-align: -1px;
+      }
+      /*overflow:hidden을 줄것 렌더링을 해줘야한다. 스크린리더가 인식을 할 수 있어야한다.*/
+      .txt-hide {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+      }
+      /*
+     .clearflex:after{
+          clear:both;
+    
+    }*/
+    </style>
+  </head>
+  <body>
+    <article class="cont-login">
+      <h2 class="txt-hide">위니브 로그인</h2>
+      <p class="txt-login">더 편리해진 위니브에 오신 것을 환영합니다.</p>
+      <a href="" class="link-login">
+        <img src="" class="img-login" />
+        로그인
+      </a>
+      <div class="find">
+        <img src="" class="img-find" alt="" /><!--중요하지않아 alt는 공백-->
+        <a href="" class="link-id">아이디</a>
+        <a href="" class="link-pw">비밀번호 찾기</a>
+      </div>
+      <div class="join">
+        <img src="" class="img-join" alt="" />
+        <a href="" class="link-join">회원가입</a>
+      </div>
+    </article>
+  </body>
+</html>
