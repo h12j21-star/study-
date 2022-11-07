@@ -1,0 +1,29 @@
+부트스트랩 페이지에서 복사하여 디자인을 가져 올 수 있다.
+부트스트랩 디자인 해보기
+
+bootstrap 목차
+9/28
+-부트스트랩 코드
+-img
+-table
+ - column-md-12
+-btn
+9/29
+-카드
+-모달창
+-메뉴창
+-alert창
+-datapicket
+-summernote
+-toast
+-select
+
+tailwindcss
+
+1. 메뉴추가
+2.  section추가
+3. background 이미지 변경
+4. 아이콘 변경 - E -Commerce아이콘 변경
+5. 모달의 프로젝트 네임 변경
+
+컨트롤+F 검색어 찾기

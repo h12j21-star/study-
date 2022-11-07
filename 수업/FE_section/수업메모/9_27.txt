@@ -1,0 +1,93 @@
+9_27
+유용한 디자인 사이트
+svg 
+svg는 코드로 이루어진 이미지이다.
+이미지가 복잡할 수록 파일의 크기가 커진다.
+화면을 키워도 이미지가 깨지지 않는다.
+
+이미지를 조작하지않을때
+img태그
+background로사용
+
+조작필요할때
+인라인으로 구현 object태그 사용
+svg파일은 수정가능 fill:red는 해당 구역 색상을 바꾼다.
+
+url 인코딩 (데이터를 표현하는 방법)
+base64 인코딩 (데이터를 표현하는 방법)
+MD5 암호화
+sha256 암호화
+
+변수사용법
+:root{
+--sec:#fff;
+}
+var(--sec)
+
+
+.eye{
+}
+.eye.left{
+}
+.eye를 포함하는 left
+
+scss
+
+node sass  를 사용한다.
+파일분리
+파일을 스타일 별로 기능별로
+분리하여 사용한다.'
+_파일명인이유
+css파일로 컴파일 되지않고 
+@import형태로 작동하게 된다.
+속성 중첩도 가능
+scss코드
+.box{
+   $:hover{
+}
+}
+scss 코드
+.box{}
+.box:hover{
+}
+
+
+프론트엔드가 가질 수 있는 경력
+HTML
+CSS
+JavaScript
+Bootstrap
+GitHub
+React
+redux
+jQuery
+figma
+TS
+next
+Sass
+d3
+jira +++++
+aws
+firebase
+mysql
+express
+마리아db
+
+adobe - 프리미어 프로
+에프터이펙트
+포토샵
+일러스트레이터
+
+discord
+slack
+notion
+
+웹디자인 기능사
+정보처리기사
+
+---
+동떨어져 있는 자격증
+sqld
+네트워크 관리사
+리눅스 마스터
+

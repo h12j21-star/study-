@@ -1,0 +1,12 @@
+scss
+@at-root
+밖으로 뽑아 낼 수 있다.
+변수 서정
+$변수 : 값
+toast scss 변수 컨벤션
+
+함수와 메서드 구분하기
+메서드는 obj안에 동작??
+
+ bootstrap
+tailwind 

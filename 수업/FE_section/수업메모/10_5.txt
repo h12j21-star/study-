@@ -1,0 +1,99 @@
+// 두 수의 합
+
+// 세개...?
+
+var twoSum = function (nums, target) {
+  // let a;
+  // let b;
+  // a = 0;
+  // while (nums.indexOf(b) == -1 && nums.lastIndexOf(a) == -1) {
+  //   a++;
+  //   b = target - a;
+  // }
+
+  let arr = [];
+  for (let a = 0; a < target; a++) {
+    let b = target - a;
+    if (nums.indexOf(b) !== -1 && nums.lastIndexOf(a) !== -1) {
+      arr.push(nums.indexOf(b));
+      arr.push(nums.lastIndexOf(a));
+      arr.sort();
+      break;
+    }
+  }
+
+  return arr;
+};
+
+console.log(twoSum([3, 3], 6));
+// > [0, 1]
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let a;
+    let b;
+    a=0;
+    let arr=[];   
+    if (target == 0 ){
+        arr.push(nums.indexOf(0));
+        arr.push(nums.lastIndexOf(0));
+    }
+    for(a;a<target;a++){ 
+         b = target-a;
+        if(nums.indexOf(b) !== -1 && nums.lastIndexOf(a) !== -1){
+                arr.push(nums.indexOf(b));
+                arr.push(nums.lastIndexOf(a));  
+                break;     
+            
+    }    
+            
+    }
+    return arr
+};
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let a;
+    let b;
+    a=0;
+    let arr=[];   
+   
+   while (nums.indexOf(b) == -1 && nums.lastIndexOf(a) == -1) {
+        a++;
+        b = target - a;
+  }
+      arr.push(nums.indexOf(b));
+      arr.push(nums.lastIndexOf(a));
+      arr.sort();
+    return arr
+};
+10/5
+
+문제이해했는지 확인하기
+알고리즘 책 찾아보기
+어떤방식으로 풀었는지
+못풀었으면 왜 못풀었는지 정리 해 보아야한다.
+다음 대면면접에서 좋은 대답을 해야함
+
+반응형 @media
+클래스 이용이유 : 컨벤션 만들기 편하고, 더 정확하다.
+컨텐츠 크기만큼만 늘어난다.
+
+width:50% 크기를 강제한다. 컨텐츠 크기에 상관없이 50%
+flex-basis:50% 컨텐츠 크기를 강제하지 않는다.유연하다.
+flex-direction에 따라 달라진다. col : 높이 row: 길이 
+flex item은 flex컨테이너의 크기에 영향을 받는다.
+
+파일을 만들어 서버에 저장하고
+http통신으로 파일을 주고 받는다.
+
+
+

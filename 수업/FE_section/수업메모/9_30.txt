@@ -1,0 +1,29 @@
+
+ES6
+ECMA(에크마) Script - 표준
+JavaScript - 실행할 수 있는 환경 - 브라우저 - 익스플로러, 파이어폭스, 크롬(v8)...
+                                            - node(v8 + @)
+
+Angular, React, Vue, jQuery
+
+브라우저->콘솔  :브라우저 개발자 도구
+node환경 ->콘솔 : shell창 ,터미널
+innerHTML 은 요소의 메서드이다.
+웹페이지를 구성하는 요소 :4개 html/css/js/
+
+변수
+string
+console.log("hello \"hello"\ world);
+이스케이프란 : 
+0외 다른 숫자는 true이다. -1투르
+0만 false!!!!!!!!!!!!!!!!
+if(a.indexOf('z')==-1){
+존재하지않는다@@
+}
+
+275
+275-256
+256+19
+256+16+4
+256+16+3+1
+100010011

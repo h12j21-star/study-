@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인접형제,일반형제</title>
+    <style>
+      div {
+        color: palevioletred;
+      }
+      .a + li {
+        background: red;
+      }
+      li + li + li {
+        font-size: 30px;
+      }
+      h1 + p + p + p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>div의 자식 p-1</p>
+      <p>div의 자식 p-2</p>
+      <p>div의 자식 p-3</p>
+    </div>
+    <div>div</div>
+    <p>div의 형제 p-1</p>
+    <p>div의 형제 p-2</p>
+    <p>div의 형제 p-3</p>
+    <section>
+      <div class="a">section요소 자식</div>
+      <p>div의 형제 p-1</p>
+      <p>div의 형제 p-2</p>
+      <p>div의 형제 p-3</p>
+    </section>
+    <h1>hello world</h1>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <ul>
+      <li>Apple</li>
+      <li class="a">Mango</li>
+      <li class="a">Banana</li>
+      <li>Melon</li>
+      <li>Strawberry</li>
+    </ul>
+  </body>
+</html>

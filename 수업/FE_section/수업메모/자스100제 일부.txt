@@ -1,0 +1,46 @@
+class  현재의 관념을 코드로 나타낼 수 있다.
+라이브러리 " : 내코드를 주로 쓰고 몇줄을 라이브러리로 사용
+리액스 : 라이브러리
+뷰 : 프레임워크
+다른코드를 갔다쓴다 프레임워크
+
+함수는 하나의 기능만!!
+
+
+XML 파일을 서버와 비동기적으로 주고받기위해 등장한게 Ajax인거고 그렇다고 XML만 오갈수 있는게 아니라 JSON같은 다른 파일 포멧도 가능한거고
+
+XMLHttpRequest 생성자가 Ajax 통신을 할 때 필요한 인스턴스를 제공해주고 그 인스턴스를 활용해서 통신하는게 Ajax
+
+
+
+오늘도 화이티잉
+- 복습
+- 프로그래머스 풀기
+
+
+
+'abde15283abced'.split('')
+(14) ['a', 'b', 'd', 'e', '1', '5', '2', '8', '3', 'a', 'b', 'c', 'e', 'd']
+Array.from('abde15283abced')
+(14) ['a', 'b', 'd', 'e', '1', '5', '2', '8', '3', 'a', 'b', 'c', 'e', 'd']
+'abde15283abced'.split('').filter(v => +v)
+(5) ['1', '5', '2', '8', '3']
+'abde15283abced'.split('').filter(v => +v).map(v => parseInt(v))
+(5) [1, 5, 2, 8, 3]
+'abde15283abced'.split('').filter(v => +v).map(v => parseInt(v)).reduce((a, c) => a + c)
+19
+
+물데네전세표응
+
+
+이런 식의 문제 풀이 습득하기
+'onetwothreefour'.match(/(one|two|three|four)/g)
+(4) ['one', 'two', 'three', 'four']
+let s = {'one':1, 'two':2, 'three':3, 'four':4}
+undefined
+let ss = 'onetwothreefour'.match(/(one|two|three|four)/g)
+undefined
+for (i of ss){
+    console.log(s[i])
+}
+VM1262
